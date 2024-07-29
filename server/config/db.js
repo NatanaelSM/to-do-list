@@ -3,12 +3,14 @@ import "dotenv/config.js";
 
 const PASSWORD = process.env.PASSWORD_DB;
 const USER = process.env.USER_DB;
+const HOST = process.env.HOST_DB;
+const PORT = process.env.PORT_DB;
 
 export const db = mysql.createConnection({
-    host: "localhost",
+    host: HOST,
     user: USER,
     password: PASSWORD,
-    port: "3306",
+    port: PORT || 3306
 });
 
 db.connect((err) => {
