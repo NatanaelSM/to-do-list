@@ -5,20 +5,16 @@ import { FormLogin } from './components/FormLogin';
 export const Login = () => {
 
     return (
-        <div className="container-login">
+        <div className="main-login">
             <div className="left-login">
-                <h1>Faça login</h1>
+                <div className="frase-login">
+                    <span>To <span style={{ color: 'rgb(255, 168, 167)', fontStyle: 'italic' }}>D</span>o<span style={{ color: 'rgb(255, 168, 167)', paddingInline: "0.1vw" }}>I</span>t</span>
+                    <span>Organize sua vida!</span>
+                </div>
                 <img src={imgLogin} className='img-login' alt='Imagem login' />
             </div>
             <div className="rigth-login">
-                <div className="container-form-login">
-                    <h1 className='header-login'>LOGIN</h1>
-                    <FormLogin />
-                    <div className='cadastro-login'>
-                        <span>Não possui cadastro?</span>
-                        <a href='#'><u>cadastre-se</u></a>
-                    </div>
-                </div>
+                <FormLogin />
             </div>
         </div>
     )
