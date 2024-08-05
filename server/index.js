@@ -2,7 +2,7 @@ import express from "express";
 import rotasUsuario from "./routes/usuarioRota.js";
 import rotasAutenticacao from "./routes/autenticacaoRota.js";
 import bodyParser from "body-parser";
-import dotenv from 'dotenv/config';
+import 'dotenv/config'
 
 const PORT = process.env.PORT || 3000;
 const app = express();
