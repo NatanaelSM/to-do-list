@@ -74,3 +74,163 @@
     }
 
 }
+
+/* Formulário */
+
+.container-form {
+    width: 50vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1.8vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.form {
+    width: 90%;
+}
+
+.header-form {
+    font-size: 3.5vh;
+    color: #003785;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    margin-top: 1.8vw;
+    margin-bottom: 1.8vw;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 2.5vh;
+}
+
+.form-group input {
+    height: 7vh;
+    border: 0;
+    padding: 1vw;
+    border-radius: 1.5vh;
+    font-size: 2vh;
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group button {
+    font-size: 2.5vh;
+    border: 0;
+    border-radius: 1.5vh;
+    background-color: #003785;
+    color: #f8f8f8;
+    height: 7vh;
+}
+
+.form-group button:hover {
+    cursor: pointer;
+}
+
+.cadastro-form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro-form span {
+    font-size: 2vh;
+    margin-right: 0.5vw;
+}
+
+.cadastro-form a {
+    font-size: 2vh;
+    color: #1E90FF;
+}
+
+@media (max-width: 2100px) {
+
+    .container-form {
+        width: 90vw;
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .container-form {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .form {
+        width: 98%;
+    }
+
+    .form-group {
+        margin-top: 7vw;
+        margin-bottom: 7vw;
+    }
+
+}
+
+@media (max-width: 1020px) {
+
+    .cadastro-form span {
+        font-size: 1.5vh;
+    }
+
+    .cadastro-form a {
+        font-size: 1.5vh;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .form-group {
+        margin-top: 13vw;
+        margin-bottom: 13vw;
+    }
+
+    .form-group label{
+        font-size: 2vh;
+    }
+
+    .form-group input{
+        font-size: 1.5vh;
+    }
+
+    .form-group button{
+        font-size: 2vh;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .form-group label{
+        font-size: 1.8vh;
+    }
+
+    .form-group button{
+        font-size: 1.8vh;
+    }
+
+    .cadastro-form span {
+        font-size: 1.3vh;
+    }
+
+    .cadastro-form a {
+        font-size: 1.3vh;
+    }
+
+}
