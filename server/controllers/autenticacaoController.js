@@ -26,7 +26,7 @@ export const login = async (req, res) => {
         
         const token = jwt.sign(results[0].id, secret);
 
-        res.status(200).json({ msg: "Autenticação realizada com sucesso!", token });
+        return res.status(200).json({ msg: "Autenticação realizada com sucesso!", token });
 
     } catch (err) {
         return res.status(500).json({ msg: "Erro no servidor!" });

@@ -6,12 +6,13 @@ import { DaysTasks } from "./pages/Tasks/DaysTasks/DaysTasks";
 
 
 export const AppRoutes = () => {
+
     return (
         <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/tasks" element={<DefaultLayout />}>
-                <Route path="all" element={<AllTasks />} />
-                <Route path="days" element={<DaysTasks />} />
+            <Route path="/" element={<DefaultLayout />}>
+                <Route path="/tasks/all" element={<AllTasks />} />
+                <Route path="/tasks/days" element={<DaysTasks />} />
             </Route>
         </Routes>
     )

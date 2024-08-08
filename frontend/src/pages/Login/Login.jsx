@@ -6,7 +6,6 @@ import { Context } from "../../context/AuthContext";
 export const Login = () => {
 
     const { handleLogin } = useContext(Context);
-
     const emailRef = useRef(null);
     const senhaRef = useRef(null);
 
