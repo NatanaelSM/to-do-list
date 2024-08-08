@@ -34,7 +34,7 @@ export const Login = () => {
             </div>
             <div className="rigth-login">
                 <div className='container-form'>
-                    <form onSubmit={handleSubmit} className='form'>
+                    <form onSubmit={handleSubmit}>
                         <h1 className='header-form'>LOGIN</h1>
                         <div className="form-group">
                             <label htmlFor='usuario'>Email</label>
