@@ -19,28 +19,32 @@ const AuthProvider = ({ children }) => {
         } else {
             setIsAutenticado(false);
         }
-
         setLoading(false)
-    }, []); 
+        
+    }, []);
 
     const handleLogin = async (email, senha) => {
         try {
             const res = await loginService(email, senha);
-            localStorage.setItem('token', res.data.token);
-            setIsAutenticado(true);
-            navigate('/tasks/days');
+            if (res.error) {
+                return { error: true, msg: res.msg }
+            } else {
+                localStorage.setItem('token', res.data.token);
+                setIsAutenticado(true);
+                navigate('/tasks/days');
+            }
         } catch (err) {
-            console.log(err);
+            return 'Erro inesperado. Tente novamente.'
         }
     };
 
     const handleLogout = () => {
         setIsAutenticado(false);
         localStorage.removeItem('token');
-        navigate('/login');
+        navigate('/usuario/login');
     };
 
-    if(isLoading){
+    if (isLoading) {
         return <h1>Loading...</h1>
     }
 

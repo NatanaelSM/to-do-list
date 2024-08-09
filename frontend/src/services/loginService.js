@@ -5,6 +5,10 @@ export const loginService = async (email, senha) => {
     const res = await api.post('/auth/login', { email, senha });
     return res;
   } catch (err) {
-    console.log(err.response.data.msg);
+    if (err.response && err.response.data && err.response.data.msg) {
+      return { error: true, msg: err.response.data.msg };
+    } else {
+      return { error: true, msg: `Erro ao fazer login. ${res.response}` };
+    }
   }
 };

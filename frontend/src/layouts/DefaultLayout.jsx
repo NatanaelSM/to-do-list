@@ -9,10 +9,12 @@ export const DefaultLayout = () => {
     useEffect(() => {
 
         if (isAutenticado === false) {
-            navigate('/login');
+            navigate('/usuario/login');
+        }else if (window.location.pathname === "/") {
+            navigate('/tasks/all');
         }
 
-    });
+    }, [isAutenticado]);
 
     return (
         <>
