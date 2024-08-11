@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { Context } from "../context/AuthContext";
+import { Context } from "../../context/AuthContext";
+import { SideBar  } from "./components/SideBar";
+import "./styles/defaultLayout.css"
 
 export const DefaultLayout = () => {
     const { isAutenticado, handleLogout } = useContext(Context);
@@ -17,10 +19,9 @@ export const DefaultLayout = () => {
     }, [isAutenticado]);
 
     return (
-        <>
-            <h1>DefaultLayout</h1>
-            <button onClick={handleLogout}>sair</button>
+        <div className="container-layout">
+            <SideBar/>
             <Outlet />
-        </>
+        </div>
     );
 };

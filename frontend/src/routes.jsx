@@ -1,8 +1,8 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Login } from "./pages/Login/Login";
 import { CadastroUsuario } from "./pages/CadastroUsuario/CadastroUsuario";
-import { DefaultLayout } from "./layouts/DefaultLayout";
-import { UsuarioLayout } from "./layouts/UsuarioLayout";
+import { DefaultLayout } from "./layouts/DefaultLayout/DefaultLayout";
+import { UsuarioLayout } from "./layouts/UsuarioLayout/UsuarioLayout";
 import { AllTasks } from "./pages/Tasks/AllTasks/AllTasks";
 import { DaysTasks } from "./pages/Tasks/DaysTasks/DaysTasks";
 import { useContext } from "react";
