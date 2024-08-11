@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import imgLayout from "../assets/imageLayout.svg";
+import imgLayout from "../../assets/imageLayout.svg";
 import "./styles/usuarioLayoutStyle.css";
 
 export const UsuarioLayout = () => {
